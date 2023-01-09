@@ -1,0 +1,350 @@
+:root {
+  --startYAngle: 0deg;
+  --startXAngle: 0deg;
+  --stopXAngle: 720deg;
+  --stopYAngle: 720deg;
+  --bottomMargin: 5%;
+  --unselected: rgba(0, 0, 0, 0.11);
+  --selected: rgba(0, 0, 0, 1);
+}
+
+body
+{
+  color: #F5F0E3;
+}
+
+/* Head css  80A3A2 */
+.HeadSection 
+{
+  background-color: #80A3A2;
+  margin-bottom: var(--bottomMargin);
+}
+
+.MyName
+{
+  font-size: 12rem;
+  position: relative;
+  left: 30%;
+  bottom: 10vh;
+}
+
+.HeadSection > *
+{
+  display: inline-block; 
+}
+
+.myNav
+{
+  display: grid;
+  grid-template-columns: 8vw 1fr;
+  background-color: #91b8b7;
+  padding-left: 5%;
+  /* padding: .5% 70% .5% 5%; */
+}
+
+.navLeft > a, .navRight > a
+{
+  text-decoration: none;
+  color: #F5F0E3;
+  font-size: 3rem;
+}
+/* all cube css */
+
+/* face */
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #80a3a28e;
+  border: solid black;
+  overflow: hidden;
+  text-align: center;
+}
+
+.backAnimation {
+  width: 100%;
+  height: 100%;
+  /* background: url("../../public/imgs/nebula.gif"); */
+}
+
+.face > * {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* cube */
+body {
+  background-color: #222;
+}
+
+.cubeContainer {
+  width: 22vh;
+  height: 22vh;
+  perspective: 500vh;
+  margin: 10% auto 0 10%;
+  display: inline-block;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: spin 20s infinite alternate-reverse;
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(11vh);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(11vh);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(11vh);
+}
+.right {
+  transform: rotateY(90deg) translateZ(11vh);
+}
+.front {
+  transform: rotateX(0deg) translateZ(11vh);
+}
+.back {
+  transform: rotateX(-180deg) translateZ(11vh);
+}
+
+@keyframes spin {
+  /* {
+      transform: rotateX(0deg) rotateY(0deg);
+      transform: rotateX(var(--startXAngle)) rotateY(var(--startYAngle));
+  } 
+  */
+  50% {
+      /* transform: rotateX(360deg) rotateY(360deg); */
+      transform: rotateX(var(--stopXAngle)) rotateY(var(--stopYAngle));
+  }
+  100% {
+      transform: rotateX(var(--startXAngle)) rotateY(var(--startYAngle));
+  }
+}
+
+
+
+
+/* Body css */
+
+.placeCenter
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.centerContent
+{
+  margin-bottom: var(--bottomMargin);
+  /* left: 20%; */
+}
+.Card
+{
+  text-align: center;
+}
+
+.cardContent
+{
+  /* color: #F5F0E3; */
+  padding: 0 2% 0 2%;
+  position: relative;
+  z-index: 1;
+}
+
+.cardGates
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.leftGate, .rightGate
+{
+  width: 47%;
+  display: inline-block;
+  height: inherit;
+  background-color: #2f5d62;
+}
+
+.leftGate
+{
+  position: relative;
+  border-right: .25rem solid #fff;
+  animation: leftWindow 3s ease-in-out forwards;
+}
+.rightGate
+{
+  position: relative;
+  border-left: .25rem solid #fff;
+  animation: rightWindow 3s ease-in-out forwards;
+}
+.cardTitle
+{
+  text-align: center;
+}
+.CardContainer
+{
+  background-color: #2F5D62;
+  padding: 1%;
+  border-radius: 10px;
+  font-size: 1.7rem;
+  position: relative;
+  overflow: hidden;
+}
+.GPA
+{
+  color: #40BFC1;
+  font-weight: 700;
+}
+
+@keyframes leftWindow {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes rightWindow {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+/* grid sizing */
+.halfHeightGrid
+{
+  grid-row: 1;
+  /* color: red; */
+}
+.doubleWidthGrid
+{
+  grid-column: 2/4;
+}
+
+.UndergradCourses
+{
+  grid-row: 1;
+}
+/* for language card */
+.doubleCardContent
+{
+  display: grid;
+  padding: 0 2% 0 2%;
+  grid-template-columns: repeat(2,auto);
+}
+
+.confidentLanguages > .innerContent
+{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+}
+
+.familiarLanguages > .innerContent
+{
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+}
+.innerContent
+{
+  font-size: 2rem;
+}
+.allCards
+{
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4,.8fr);
+  gap: 1.5rem;
+  /* border: red solid 10px; */
+}
+.halfNormHeight
+{
+  height: 50%;
+}
+
+
+/* projects */
+.ProjectsSection
+{
+  background-color: #406766;
+}
+
+/* project items */
+.ProjectsContainer
+{
+  background-color: #2F5D62;
+  text-align: center;
+  padding: 1%;
+  margin-top: 2%;
+  font-size: 1.7rem;
+  line-height: 2;
+  display: absolute;
+  border-radius: 10px;
+  margin-bottom: calc(var(--bottomMargin) / 2);
+}
+
+.ProjectKeyPoints
+{
+  text-align: left;
+}
+.keyPoint
+{
+  list-style: circle;
+}
+
+.ProjectTitle
+{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
+.ProjectIndexContainer
+{
+  width: 100%;
+  gap: 3rem;
+}
+
+.IndexButton
+{
+  /* height: inherit; */
+  font-size: 1rem;
+  width: 10%;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.11);
+  color: rgba(0, 0, 0, 0);
+  margin-bottom: calc(var(--bottomMargin) / 2);
+  animation: btnIndexSelect .5s ease-out forwards;
+  animation-play-state: paused;
+}
+
+.active
+{
+  animation-play-state: running;
+}
+
+.inActive
+{
+  animation-name: none;
+  background-color: rgba(0, 0, 0, 0.11);
+}
+
+@keyframes btnIndexSelect
+{
+  0% {
+    background-color: var(--unselected);
+  }
+  100% {
+    background-color: var(--selected);
+  }
+}
