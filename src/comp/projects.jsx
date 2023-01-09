@@ -101,6 +101,7 @@ class Projects extends React.Component
                 <div className="ProjectIndexContainer placeCenter">
                     {this.state.indexButtons}
                 </div>
+                <img className="Transition" src="./imgs/transition.svg" alt="transition"/>
             </div>
         );
     }

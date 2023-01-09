@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import AbtMe from './comp/abtMe';
+import MyFooter from './comp/footer';
 import Head from './comp/headSec';
 import NavBar from './comp/navbar';
 import Projects from './comp/projects';
@@ -13,6 +14,7 @@ function App() {
       <Head/>
       <AbtMe/>
       <Projects projects = {projects}/>
+      <MyFooter />
     </>
   );
 }
