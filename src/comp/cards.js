@@ -4,10 +4,15 @@ import React from "react";
 function NormalCard(props)
 {
     const content = props.content.map(item => {
+        if (props.cardType === "PersonalDescriptionCard")
+        {
+            return <li style = {{textAlign: "left"}} >{item}</li>
+        }
         return <p>{item}</p>
     });
 
-    return (<div className="CardContainer">
+    // added card type to add css targeting the specific component afterwards
+    return (<div className={"CardContainer " + props.cardType}>
                 <div className="cardGates">
                     <div className="leftGate"></div>
                     <div className="rightGate"></div>
