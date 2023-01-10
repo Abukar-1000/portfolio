@@ -6,6 +6,13 @@
   --bottomMargin: 5%;
   --unselected: rgba(0, 0, 0, 0.11);
   --selected: rgba(0, 0, 0, 1);
+  --textSize: 1.7rem;
+  --nameSize: 8rem;
+  --navTxtSize: 3rem;
+  --projectTxtSize: 1.7rem;
+  --projectTitleSize: 2rem;
+  --contactLinksTxtSize: 2.7rem;
+  --cardTitleTxtSize: 3rem;
 }
 
 html
@@ -27,7 +34,7 @@ body
 
 .MyName
 {
-  font-size: 12rem;
+  font-size: var(--nameSize);
   position: relative;
   left: 30%;
   bottom: 10vh;
@@ -51,7 +58,7 @@ body
 {
   text-decoration: none;
   color: #F5F0E3;
-  font-size: 3rem;
+  font-size: var(--navTxtSize);
 }
 /* all cube css */
 
@@ -193,6 +200,7 @@ body {
 }
 .cardTitle
 {
+  font-size: var(--cardTitleTxtSize);
   text-align: center;
 }
 .CardContainer
@@ -200,7 +208,7 @@ body {
   background-color: #2F5D62;
   padding: 1%;
   border-radius: 10px;
-  font-size: 1.7rem;
+  font-size: var(--textSize);
   position: relative;
   overflow: hidden;
 }
@@ -262,7 +270,7 @@ body {
 }
 .innerContent
 {
-  font-size: 2rem;
+  font-size: var(--projectTxtSize);
 }
 .allCards
 {
@@ -291,7 +299,7 @@ body {
   text-align: center;
   padding: 1%;
   margin-top: 2%;
-  font-size: 1.7rem;
+  font-size: var(--textSize);
   line-height: 2;
   display: absolute;
   border-radius: 10px;
@@ -309,7 +317,7 @@ body {
 
 .ProjectTitle
 {
-  font-size: 2rem;
+  font-size: var(--projectTitleSize);
   font-weight: bold;
 }
 
@@ -372,7 +380,7 @@ body {
 }
 .ContactLinks
 {
-  font-size: 2.7rem;
+  font-size: var(--contactLinksTxtSize);
   gap: 5vw;
 }
 
@@ -380,4 +388,49 @@ body {
 {
   color: #F5F0E3;
   text-decoration: none;
+}
+
+/* decktop query */
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) 
+{ 
+
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  /* and (min-resolution: 192dpi)   */
+{ 
+  :root {
+    --startYAngle: 0deg;
+    --startXAngle: 0deg;
+    --stopXAngle: 720deg;
+    --stopYAngle: 720deg;
+    --bottomMargin: 5%;
+    --unselected: rgba(0, 0, 0, 0.11);
+    --selected: rgba(0, 0, 0, 1);
+    --textSize: 1.7rem;
+    --nameSize: 6rem;
+    --navTxtSize: 3rem;
+    --projectTxtSize: 1.2rem;
+    --projectTitleSize: 2rem;
+    --contactLinksTxtSize: 2.7rem;
+    --cardTitleTxtSize: 2rem;
+  }
+  .allCards
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* mobile query */
+@media screen and (max-width: 600px){
+  
 }
