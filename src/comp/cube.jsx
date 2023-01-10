@@ -10,12 +10,12 @@ function Cube() {
         <>
             <div className="cubeContainer">
                 <div className="cube">
-                    <Face side = "front" imgSrc = "imgs/github.png" bgColor = {bgColor}/>  
-                    <Face side = "back" imgSrc = "imgs/linkedin.png" bgColor = {bgColor}/>
-                    <Face side = "right" imgSrc = "imgs/js.png" bgColor = {bgColor}/>
-                    <Face side = "left"  imgSrc = "imgs/node.png" bgColor = {bgColor}/>
-                    <Face side = "top"  imgSrc = "imgs/python.png" bgColor = {bgColor}/>
-                    <Face side = "bottom" imgSrc = "imgs/java.png" bgColor = {bgColor}/>
+                    <Face side = "front" imgSrc = "imgs/rust.svg" bgColor = {bgColor}/>  
+                    <Face side = "back" imgSrc = "imgs/cpp.svg" bgColor = {bgColor}/>
+                    <Face side = "right" imgSrc = "imgs/javascript.svg" bgColor = {bgColor}/>
+                    <Face side = "left"  imgSrc = "imgs/node.svg" bgColor = {bgColor}/>
+                    <Face side = "top"  imgSrc = "imgs/python.svg" bgColor = {bgColor}/>
+                    <Face side = "bottom" imgSrc = "imgs/java.svg" bgColor = {bgColor}/>
                 </div>
             </div>
             
