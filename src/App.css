@@ -42,7 +42,12 @@ body
 {
   color: #F5F0E3;
   background-color: #222;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* Head css  80A3A2 */
@@ -320,7 +325,7 @@ body
   line-height: 2;
   /* display: absolute; */
   border-radius: 10px;
-  /* margin-bottom: calc(var(--bottomMargin) / 2); */
+  margin-bottom: calc(var(--bottomMargin) / 2);
 }
 
 .ProjectKeyPoints
@@ -350,6 +355,7 @@ body
   /* height: inherit; */
   font-size: 1rem;
   width: 10%;
+  border: none;
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.11);
   color: rgba(0, 0, 0, 0);
@@ -542,6 +548,189 @@ body
   }
 }
 
+/* tablet query */
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --startYAngle: 0deg;
+    --startXAngle: 0deg;
+    --stopXAngle: 720deg;
+    --stopYAngle: 720deg;
+    --bottomMargin: 5%;
+    --unselected: rgba(0,0,0,.11);
+    --selected: #000;
+    --textSize: 1.5rem;
+    --nameSize: 5rem;
+    --navTxtSize: 2.5rem;
+    --projectTxtSize: 1.2rem;
+    --projectTitleSize: 1.7rem;
+    --contactLinksTxtSize: 2.4rem;
+    --cardTitleTxtSize: 1.7rem;
+    
+    --languagesColumn: 1/2;
+    --languagesRow: 2;
+
+    --awardsRow: 1;
+    --awardsColumn: ;
+
+    --UnderGradCoursesRow: 2;
+    --UnderGradCoursesColumn: ;
+
+    --PersonalDescriptionRow: 3;
+    --PersonalDescriptionColumn: ;
+
+    --SideCoursesRow: 3;
+    --SideCoursesColumn: 2;
+
+    --TransitionXPos: 0;
+    --TransitionYPos: .4vh;
+  }
+  .carouselBtns
+  {
+    width: 10vw;
+  }
+  .allCards
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .cubeContainer
+  {
+    display: none;
+  }
+  .HeadSection
+  {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+  .MyName
+  {
+    position: static;
+  }
+  #footer
+  {
+    padding: 2vh 1vw 3vh 1vw;
+    /* position: static; */
+  }
+  .ContactLinks
+  {
+    width: 80vw !important; 
+  }
+  .ConactItem
+  {
+    width: max-content;
+  }
+  .CardContainer
+  {
+    padding: 5%;
+  }
+  .navRight
+  {
+    padding-left: 5%;
+  }
+  .ProjectsContainer
+  {
+    padding-left: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  .IndexButton
+  {
+    width: 15%;
+  }
+}
+
+/* tablet query */
+
+@media screen and (max-width: 1300px) {
+  :root {
+    --startYAngle: 0deg;
+    --startXAngle: 0deg;
+    --stopXAngle: 720deg;
+    --stopYAngle: 720deg;
+    --bottomMargin: 5%;
+    --unselected: rgba(0,0,0,.11);
+    --selected: #000;
+    --textSize: 1.5rem;
+    --nameSize: 6rem;
+    --navTxtSize: 2.5rem;
+    --projectTxtSize: 1.2rem;
+    --projectTitleSize: 1.7rem;
+    --contactLinksTxtSize: 2.4rem;
+    --cardTitleTxtSize: 1.7rem;
+    
+    --languagesColumn: 1/2;
+    --languagesRow: 2;
+
+    --awardsRow: 1;
+    --awardsColumn: ;
+
+    --UnderGradCoursesRow: 2;
+    --UnderGradCoursesColumn: ;
+
+    --PersonalDescriptionRow: 3;
+    --PersonalDescriptionColumn: ;
+
+    --SideCoursesRow: 3;
+    --SideCoursesColumn: 2;
+
+    --TransitionXPos: 0;
+    --TransitionYPos: .7vh;
+  }
+  .carouselBtns
+  {
+    width: 10vw;
+  }
+  .allCards
+  {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .cubeContainer
+  {
+    /* display: none; */
+    /* padding-left: 2vw;
+    padding-top: -3vw; */
+    position: relative;
+    top: -4vh;
+  }
+  .HeadSection
+  {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .MyName
+  {
+    position: static;
+    padding-right: 5%;
+    width: max-content;
+  }
+  .ContactLinks
+  {
+    width: 60vw;
+  }
+  .CardContainer
+  {
+    padding: 5%;
+  }
+  .navRight
+  {
+    padding-left: 5%;
+  }
+  .ProjectsContainer
+  {
+    padding-left: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  .IndexButton
+  {
+    width: 15%;
+  }
+}
+
+
+
 /* mobile query */
 @media screen and (max-width: 600px){
   :root {
@@ -579,6 +768,7 @@ body
   #footer
   {
     padding-top: 3vh;
+    padding-bottom: 5vh;
     
   }
   .cubeContainer
@@ -611,7 +801,16 @@ body
   {
     padding-left: 5%;
   }
-  
+  .ProjectsContainer
+  {
+    padding-left: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  .IndexButton
+  {
+    width: 15%;
+  }
 }
 
 @media screen and (max-width: 400px){
@@ -642,11 +841,5 @@ body
     --SideCoursesColumn: ;
     --TransitionXPos: 0;
     --TransitionYPos: .7vh;
-  }
-  .ProjectsContainer
-  {
-    padding-left: 0;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
   }
 }
