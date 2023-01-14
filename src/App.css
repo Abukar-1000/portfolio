@@ -544,5 +544,109 @@ body
 
 /* mobile query */
 @media screen and (max-width: 600px){
+  :root {
+    --startYAngle: 0deg;
+    --startXAngle: 0deg;
+    --stopXAngle: 720deg;
+    --stopYAngle: 720deg;
+    --bottomMargin: 5%;
+    --unselected: rgba(0,0,0,.11);
+    --selected: #000;
+    --textSize: .7rem;
+    --nameSize: 3rem;
+    --navTxtSize: 1.5rem;
+    --projectTxtSize: .7rem;
+    --projectTitleSize: 1.2rem;
+    --contactLinksTxtSize: 1.4rem;
+    --cardTitleTxtSize: 1.2rem;
+    --languagesColumn: ;
+    --languagesRow: ;
+    --awardsRow: ;
+    --awardsColumn: ;
+    --UnderGradCoursesRow: ;
+    --UnderGradCoursesColumn: ;
+    --PersonalDescriptionRow: ;
+    --PersonalDescriptionColumn: ;
+    --SideCoursesRow: ;
+    --SideCoursesColumn: ;
+    --TransitionXPos: 0;
+    --TransitionYPos: .7vh;
+  }
+  .carouselBtns
+  {
+    width: 10vw;
+  }
+  #footer
+  {
+    padding-top: 3vh;
+    
+  }
+  .cubeContainer
+  {
+    display: none;
+  }
+  .allCards
+  {
+    grid-template-columns: repeat(1,auto);
+  }
+  .HeadSection
+  {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+  .MyName
+  {
+    position: static;
+  }
+  .ContactLinks
+  {
+    width: 80vw;
+  }
+  .CardContainer
+  {
+    padding: 5%;
+  }
+  .navRight
+  {
+    padding-left: 5%;
+  }
   
+}
+
+@media screen and (max-width: 400px){
+  :root {
+    --startYAngle: 0deg;
+    --startXAngle: 0deg;
+    --stopXAngle: 720deg;
+    --stopYAngle: 720deg;
+    --bottomMargin: 5%;
+    --unselected: rgba(0,0,0,.11);
+    --selected: #000;
+    --textSize: .7rem;
+    --nameSize: 3rem;
+    --navTxtSize: 1.5rem;
+    --projectTxtSize: .7rem;
+    --projectTitleSize: 1.2rem;
+    --contactLinksTxtSize: 1.3rem;
+    --cardTitleTxtSize: 1.2rem;
+    --languagesColumn: ;
+    --languagesRow: ;
+    --awardsRow: ;
+    --awardsColumn: ;
+    --UnderGradCoursesRow: ;
+    --UnderGradCoursesColumn: ;
+    --PersonalDescriptionRow: ;
+    --PersonalDescriptionColumn: ;
+    --SideCoursesRow: ;
+    --SideCoursesColumn: ;
+    --TransitionXPos: 0;
+    --TransitionYPos: .7vh;
+  }
+  .ProjectsContainer
+  {
+    padding-left: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
 }
