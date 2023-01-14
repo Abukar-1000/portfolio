@@ -80,6 +80,7 @@ const programmingLanguages = {
 
 const awards = [
     "2022 – IUPUI Highest Honors",
+    "2022 – IUPUI Highest Honors",
     "2021 – IUPUI Highest Honors",
     "2020 – MTI A-Honor Roll"
 ];
