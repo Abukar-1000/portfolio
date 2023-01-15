@@ -71,7 +71,7 @@ function GpaCard(props)
                         <p>IUPUI</p>
                         <p>BS In Computer Science</p>
                         <p>May 2025 | Indiananpolis,IN</p>
-                        <p className="GPA">GPA: 3.97 / 4.0</p>   
+                        <p className="GPA">GPA: 3.98 / 4.0</p>   
                     </div>     
                 </div>
             </div>)
