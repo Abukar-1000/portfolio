@@ -13,18 +13,18 @@ var options = {
   maxAge: '1m',
   redirect: false
 }
+
+let basePath = {}
 app.use(express.static('build', options))
 
 app.route("/resume")
 .get((req,res) => {
-  console.log(`\n\n\npath ${__dirname + "\\public\\html\\" }\n\n\n`)
   res.sendFile("index.html", { root: __dirname + "\\public\\html\\" });
 })
 
 app.route("/")
 .get((req,res) => {
-  // res.sendFile("index.html", { root: __dirname + "\\public\\html\\" });
-  res.send("under Construction. Currently unavailable 😭");
+  res.sendFile("index.html",{ root: __dirname + "\\public\\" })
 })
 const port = process.env.PORT || 3000
 
