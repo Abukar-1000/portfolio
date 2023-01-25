@@ -17,6 +17,7 @@ app.use(express.static('build', options))
 
 app.route("/resume")
 .get((req,res) => {
+  console.log(`\n\n\npath ${__dirname + "\\public\\html\\" }\n\n\n`)
   res.sendFile("index.html", { root: __dirname + "\\public\\html\\" });
 })
 
