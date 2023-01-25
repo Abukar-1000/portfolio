@@ -15,11 +15,16 @@ var options = {
 }
 app.use(express.static('build', options))
 
-app.route("/")
+app.route("/resume")
 .get((req,res) => {
-  res.sendFile("index.html", { root: __dirname + "\\public\\" });
+  res.sendFile("index.html", { root: __dirname + "\\public\\html\\" });
 })
 
+app.route("/")
+.get((req,res) => {
+  // res.sendFile("index.html", { root: __dirname + "\\public\\html\\" });
+  res.write("under Construction. Currently unavailable 😭")
+})
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
