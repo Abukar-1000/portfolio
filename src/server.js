@@ -23,7 +23,7 @@ app.route("/resume")
 app.route("/")
 .get((req,res) => {
   // res.sendFile("index.html", { root: __dirname + "\\public\\html\\" });
-  res.write("under Construction. Currently unavailable 😭")
+  res.send("under Construction. Currently unavailable 😭");
 })
 const port = process.env.PORT || 3000
 
