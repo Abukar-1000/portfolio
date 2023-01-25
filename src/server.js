@@ -22,6 +22,7 @@ app.route("/resume")
   res.sendFile("index.html", { root: __dirname + "\\public\\html\\" });
 })
 
+
 app.route("/")
 .get((req,res) => {
   res.sendFile("index.html",{ root: __dirname + "\\public\\" })
