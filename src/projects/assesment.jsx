@@ -34,15 +34,12 @@ function Assesment() {
                     }
                 });
 
-                // create jsx elements to display in order
+                // create jsx elements to display stations in order
                 trainStations = targetColumn.cachedContents.top.map(entry => {
                     return <li className="stationEntry" >{entry.item}</li>
                 });
-                // console.log("train stations");
-                // console.log(trainStations);
-                // console.log(trainStations.length);
 
-                // update UI state
+                // update UI state to show solution
                 setTrainData(trainStations);
                 return trainStations;
             } catch (err) {
@@ -54,7 +51,8 @@ function Assesment() {
     },[]);
     return (<div className="placeCenter assesmentContainer">
         <div className="listContainer">
-            <h1 className="title underline">Stations: </h1>
+            <h1 className="title">Stations: </h1>
+            <br className="underline"/>
             <ol>
                 {trainData}
             </ol>
