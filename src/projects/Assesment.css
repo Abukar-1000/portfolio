@@ -1,6 +1,7 @@
 :root 
 {
     --stationEntryFontSize: 1.7rem;
+    --dynamicColNum: 3;
 }
 
 body
@@ -17,8 +18,8 @@ body
 
 .assesmentContainer
 {
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .listContainer
@@ -30,10 +31,11 @@ body
 
 .underline
 {
-    border-bottom: 2px solid #fff;
+    border-bottom: 12px solid #fff;
 }
 .title
 {
+    text-align: center;
     font-size: calc(2 * var(--stationEntryFontSize));
 
 }
@@ -49,7 +51,38 @@ body
     text-align: center;
 }
 
-/* li::before
+
+.flexableGridDisplay
 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(var(--dynamicColNum),1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+
+.doubleGridDisplay
+{
+    padding-left: 2%;
     padding-right: 2%;
-} */
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.EditorContainer > button
+{
+    width: 100%;
+    background-color: #80a3a2;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.clipboardImg
+{
+    display: inline-block;
+}
+.copyContainerContent
+{
+    display: inline-block;
+    padding-right: 2%;
+    font-size: var(--stationEntryFontSize);
+}

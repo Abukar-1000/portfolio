@@ -1,5 +1,8 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
+import Editor from "./editor";
+import {_,sqlSolution1,sqlSolution2,pythonSolution,jsSolution} from "../info"
+
 import './Assesment.css';
 
 function Assesment() {
@@ -34,11 +37,15 @@ function Assesment() {
                     }
                 });
 
+                // grab first 10
+                trainStations = trainStations.slice(0,10);
+
                 // create jsx elements to display stations in order
-                trainStations = targetColumn.cachedContents.top.map(entry => {
+                trainStations = trainStations.map(entry => {
                     return <li className="stationEntry" >{entry.item}</li>
                 });
 
+                console.log(trainStations)
                 // update UI state to show solution
                 setTrainData(trainStations);
                 return trainStations;
@@ -49,13 +56,26 @@ function Assesment() {
 
         makeRequest(URL);
     },[]);
-    return (<div className="placeCenter assesmentContainer">
-        <div className="listContainer">
-            <h1 className="title">Stations: </h1>
-            <br className="underline"/>
-            <ol>
-                {trainData}
-            </ol>
+    return (<div className="doubleGridDisplay assesmentContainer">
+        <div>
+            <div className="listContainer">
+                <h1 className="title">Stations: </h1>
+                <br className="underline"/>
+                <ol>
+                    {trainData}
+                </ol>
+            </div>
+        </div>
+        <div className="suplimentaryContent flexableGridDisplay">
+            {/* <div className="">
+                <div className="">
+                    
+                </div>
+            </div> */}
+            <Editor content = {sqlSolution1} title = {"Sql Solution 1"}/>
+            <Editor content = {sqlSolution2} title = {"Sql Solution 2"}/>
+            <Editor content = {pythonSolution} title = {"Python Solution"}/>
+            <Editor content = {jsSolution} title = {"React Solution"}/>
         </div>
     </div>);
 }
