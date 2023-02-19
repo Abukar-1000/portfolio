@@ -1,12 +1,6 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
-/*
-    meta => view => columns
-
-    stations are in meta.view.columns[fieldName = "name"].cachedContents.top
-    apiResponse.data.meta.view.columns[10].cachedContents.top
-*/
-
+import './Assesment.css';
 
 function Assesment() {
 
@@ -42,7 +36,7 @@ function Assesment() {
 
                 // create jsx elements to display in order
                 trainStations = targetColumn.cachedContents.top.map(entry => {
-                    return <li>{entry.item}</li>
+                    return <li className="stationEntry" >{entry.item}</li>
                 });
                 // console.log("train stations");
                 // console.log(trainStations);
@@ -58,11 +52,13 @@ function Assesment() {
 
         makeRequest(URL);
     },[]);
-    return (<div>
-    <h1>Stations: </h1>
-        <ol>
-            {trainData}
-        </ol>
+    return (<div className="placeCenter assesmentContainer">
+        <div className="listContainer">
+            <h1 className="title underline">Stations: </h1>
+            <ol>
+                {trainData}
+            </ol>
+        </div>
     </div>);
 }
 

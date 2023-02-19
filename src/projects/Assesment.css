@@ -1,0 +1,55 @@
+:root 
+{
+    --stationEntryFontSize: 1.7rem;
+}
+
+body
+{
+    /* background-color: aliceblue; */
+}
+
+.placeCenter
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assesmentContainer
+{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.listContainer
+{
+    padding: 2% 4%;
+    background-color: #333131;
+    border-radius: 10px;
+}
+
+.underline
+{
+    border-bottom: 2px solid #fff;
+}
+.title
+{
+    font-size: calc(2 * var(--stationEntryFontSize));
+
+}
+
+/* ol
+{
+    background-color: #2F5D62;
+} */
+.stationEntry
+{
+    font-size: var(--stationEntryFontSize);
+    line-height: 2;
+    text-align: center;
+}
+
+/* li::before
+{
+    padding-right: 2%;
+} */
