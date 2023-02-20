@@ -33,7 +33,7 @@ function Editor(props) {
         >
             {
                 (isLink)? 
-                <a href="https://jsfiddle.net/AbukarDjama/xbc6je7h/2/"><p className="copyContainerContent">{title}</p></a> :
+                <a href="https://jsfiddle.net/AbukarDjama/vyj6mfuk/25/"><p className="copyContainerContent">{title}</p></a> :
                 <p className="copyContainerContent">{title}</p>
             }
             <img className = "clipboardImg" src={"./imgs/" + copyImg}/>

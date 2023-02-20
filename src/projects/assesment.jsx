@@ -21,6 +21,7 @@ function Assesment() {
                 const apiResponse = await axios.get(url);
                 
                 // grab the column with fieldName = "name" | there is an index because .filter returns an array for all solutions
+                // axios returns a .data field in the response
                 let targetColumn = apiResponse.data.meta.view.columns.filter(entry => {
                     return entry.fieldName === "name";
                 })[0];
@@ -71,7 +72,7 @@ function Assesment() {
             <Editor content = {sqlSolution2} title = {"Sql Solution 2"}/>
             <Editor content = {pythonSolution} title = {"Python Solution"}/>
             <Editor content = {jsSolution} title = {"React Solution"}/>
-            <Editor content = {jsSolution} title = {"Plain JS Solution"} isLink = {true}/>
+            <Editor content = {jsSolution} title = {"Link to Plain JS Solution"} isLink = {true}/>
         </div>
     </div>);
 }
