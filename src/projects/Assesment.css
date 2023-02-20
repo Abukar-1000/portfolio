@@ -76,6 +76,10 @@ body
     border-radius: 3px;
 }
 
+.EditorContainer > button:hover
+{
+    cursor: pointer;
+}
 .clipboardImg
 {
     display: inline-block;
@@ -85,4 +89,10 @@ body
     display: inline-block;
     padding-right: 2%;
     font-size: var(--stationEntryFontSize);
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
 }

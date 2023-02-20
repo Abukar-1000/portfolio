@@ -3,22 +3,39 @@ import {React, useState} from "react";
 function Editor(props) {
     const {
         content,
-        title
+        title,
+        isLink
     } = props;
 
-    let [copyImg,setCopyImg] = useState("copy.png");
+    let startTimg;
+    (isLink)? startTimg = "link.png" :  startTimg = "copy.png";
+
+    let [copyImg,setCopyImg] = useState(startTimg);
+
     return (<div className="EditorContainer">
         <button
             type="button"
             onClick={e => {
-                navigator.clipboard.writeText(content);
-                setCopyImg("check.png");
-                setTimeout(() => {
-                    setCopyImg("copy.png");
-                },500)
+                if (isLink){
+                    window.location.assign("https://jsfiddle.net/AbukarDjama/xbc6je7h/2/");
+                    setCopyImg("check.png");
+                    setTimeout(() => {
+                        setCopyImg("link.png");
+                    },500)
+                } else {
+                    navigator.clipboard.writeText(content);
+                    setCopyImg("check.png");
+                    setTimeout(() => {
+                        setCopyImg("copy.png");
+                    },500)
+                }
             }}
         >
-            <p className="copyContainerContent">{title}</p>
+            {
+                (isLink)? 
+                <a href="https://jsfiddle.net/AbukarDjama/xbc6je7h/2/"><p className="copyContainerContent">{title}</p></a> :
+                <p className="copyContainerContent">{title}</p>
+            }
             <img className = "clipboardImg" src={"./imgs/" + copyImg}/>
         </button>
     </div>);

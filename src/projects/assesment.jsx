@@ -67,15 +67,11 @@ function Assesment() {
             </div>
         </div>
         <div className="suplimentaryContent flexableGridDisplay">
-            {/* <div className="">
-                <div className="">
-                    
-                </div>
-            </div> */}
             <Editor content = {sqlSolution1} title = {"Sql Solution 1"}/>
             <Editor content = {sqlSolution2} title = {"Sql Solution 2"}/>
             <Editor content = {pythonSolution} title = {"Python Solution"}/>
             <Editor content = {jsSolution} title = {"React Solution"}/>
+            <Editor content = {jsSolution} title = {"Plain JS Solution"} isLink = {true}/>
         </div>
     </div>);
 }
