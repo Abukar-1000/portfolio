@@ -32,6 +32,15 @@ const projects = [
     },
     {
         key: 2,
+        title: "Wi-Fi Privilege API",
+        duration: "August 2020 – current",
+        keyPoints: [
+            "Written in JavaScript the restful API utilizes a remote Mongo DB cluster and queries user privileges on my local network. ",
+            "Meant to extend the functionality of the Wi-Fi bomb project by making crucial data accessible across all IOT devices I use."
+        ]
+    },
+    {
+        key: 3,
         title: "Attendance Bot",
         duration: "August 2020 – May 2021",
         keyPoints: [

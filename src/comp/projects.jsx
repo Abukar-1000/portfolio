@@ -28,6 +28,10 @@ class Projects extends React.Component
             return <ProjectItem title = {project.title} dur = {project.duration} points = {project.keyPoints} />
         });
 
+        this.projectItems.forEach(element => {
+            console.log(element);
+            // console.log(`${element} projects`)
+        });
         let indexButtons = this.props.projects.map(project => {
             if (!project.key)
             {
@@ -79,7 +83,7 @@ class Projects extends React.Component
             return <button className = "IndexButton inActive">B</button>
         })
 
-        console.log(newIndexButtons)
+        // console.log(newIndexButtons)
         this.setState({
             index: newIndex,
             currentDiv: this.projectItems[newIndex],
